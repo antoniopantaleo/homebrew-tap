@@ -5,21 +5,21 @@
 class Wwdc < Formula
   desc "A CLI tool to scrape and export WWDC session videos"
   homepage "https://github.com/antoniopantaleo/wwdc"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/antoniopantaleo/wwdc/releases/download/v0.1.3/wwdc_Darwin_x86_64.tar.gz"
-      sha256 "e3a69aef73bf64d5891fe09b99133291163a0d9842dcb45671a3e4073fc52e9e"
+      url "https://github.com/antoniopantaleo/wwdc/releases/download/v0.1.4/wwdc_Darwin_x86_64.tar.gz"
+      sha256 "c11ac41f3789fa9c7c372565cb24ff35cf930567ea0f9485ca6e7bd52a44ee64"
 
       define_method(:install) do
         bin.install "wwdc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/antoniopantaleo/wwdc/releases/download/v0.1.3/wwdc_Darwin_arm64.tar.gz"
-      sha256 "8d7e515c0ef33c0fb423bbc15536866f891cdf0e1411b147ecc4b11d071a7022"
+      url "https://github.com/antoniopantaleo/wwdc/releases/download/v0.1.4/wwdc_Darwin_arm64.tar.gz"
+      sha256 "25045774deff6688a66799aae573295bce9ba05e4216dfae2e6477ec4536b1ef"
 
       define_method(:install) do
         bin.install "wwdc"
@@ -29,15 +29,15 @@ class Wwdc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/antoniopantaleo/wwdc/releases/download/v0.1.3/wwdc_Linux_x86_64.tar.gz"
-      sha256 "064803bdda5bbf17ab038ea0d70247c95b87520d38bba1bc087abf70ba7b193d"
+      url "https://github.com/antoniopantaleo/wwdc/releases/download/v0.1.4/wwdc_Linux_x86_64.tar.gz"
+      sha256 "33e540a314abe2e054ceead96f5cabff079f5c5d3307dd971e1c1dcb9a21c7da"
       define_method(:install) do
         bin.install "wwdc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/antoniopantaleo/wwdc/releases/download/v0.1.3/wwdc_Linux_arm64.tar.gz"
-      sha256 "2a49dac2d8c6878e99f2b3eefaea5da9763b12229d182c90a823b6dcfaa3db0e"
+      url "https://github.com/antoniopantaleo/wwdc/releases/download/v0.1.4/wwdc_Linux_arm64.tar.gz"
+      sha256 "02d407a68c4b88be547ac598af30d169e66b45ab3a96ee9d537aabbce563c97a"
       define_method(:install) do
         bin.install "wwdc"
       end
